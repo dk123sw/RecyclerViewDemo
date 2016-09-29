@@ -11,18 +11,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import butterknife.Bind;
-import butterknife.BindString;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.IconsHelper;
 import com.smartdengg.recyclerviewingg.R;
 import com.smartdengg.recyclerviewingg.adapter.AnimatorAdapter;
 import com.smartdengg.recyclerviewingg.decoration.MarginDecoration;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.BindString;
+
 /**
- * Created by SmartDengg on 2016/1/29.
+ * 添加与删除Activity
  */
 public class ItemAnimatorHeaderActivity extends BaseActivity {
 
@@ -73,11 +76,16 @@ public class ItemAnimatorHeaderActivity extends BaseActivity {
   @Override public boolean onCreateOptionsMenu(Menu menu) {
 
     getMenuInflater().inflate(R.menu.menu_item, menu);
-
+//    这是menu的一个子项
     MenuItem searchItem = menu.findItem(R.id.action_inbox_1);
+//    给子项一个ActionView 内有一个ImageButton
     searchItem.setActionView(R.layout.menu_inbox_btn_item);
+//    读出这个ImageButton
     ImageButton searchButton = (ImageButton) searchItem.getActionView().findViewById(R.id.action_inbox_btn);
+//    给这个ImageButton添加视图
     searchButton.setImageDrawable(getResources().getDrawable(android.R.drawable.ic_menu_add));
+
+//    给ActionView添加监控
     searchItem.getActionView().setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
 

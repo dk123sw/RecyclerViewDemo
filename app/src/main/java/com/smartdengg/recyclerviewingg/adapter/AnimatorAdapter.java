@@ -8,16 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import butterknife.Bind;
-import butterknife.ButterKnife;
+
 import com.smartdengg.recyclerviewingg.IconsHelper;
 import com.smartdengg.recyclerviewingg.R;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
- * Created by SmartDengg on 2016/1/29.
+ * 此Adapter添加一个增加条目和一个删除条目的方法
  */
 public class AnimatorAdapter extends RecyclerView.Adapter<AnimatorAdapter.ViewHolder> {
 

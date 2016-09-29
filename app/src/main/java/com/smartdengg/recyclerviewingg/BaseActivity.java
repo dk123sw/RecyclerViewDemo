@@ -12,10 +12,15 @@ import android.view.MenuItem;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+/**
+ * @各个Activity需要继承的父类
+ */
+
 public abstract class BaseActivity extends AppCompatActivity {
 
   @NonNull @Bind(R.id.toolbar_layout_root) protected Toolbar toolbar;
 
+//  子类继承,省去子类定义ButterKnife和ToolBar
   @Override public void setContentView(@LayoutRes int layoutResID) {
     super.setContentView(layoutResID);
     ButterKnife.bind(BaseActivity.this);

@@ -5,15 +5,15 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.Button;
-import butterknife.Bind;
-import butterknife.BindString;
-import butterknife.OnClick;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.R;
 
-/**
- * Created by SmartDengg on 2016/1/30.
- */
+import butterknife.Bind;
+import butterknife.BindString;
+import butterknife.OnClick;
+
+
 public class DecorationActivity extends BaseActivity {
 
   @BindString(R.string.decoration_recyclerView) protected String title;

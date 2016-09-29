@@ -11,18 +11,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import butterknife.Bind;
-import butterknife.BindString;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.IconsHelper;
 import com.smartdengg.recyclerviewingg.R;
 import com.smartdengg.recyclerviewingg.adapter.AnimatorAdapter;
 import com.smartdengg.recyclerviewingg.decoration.MarginDecoration;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.BindString;
+
 /**
- * Created by SmartDengg on 2016/1/29.
+ * 添加与删除Activity
  */
 public class ItemAnimatorFooterActivity extends BaseActivity {
 

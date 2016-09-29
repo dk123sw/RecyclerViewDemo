@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by SmartDengg on 2016/1/28.
+ * 用于储存图标列表的类
  */
 public class IconsHelper {
 

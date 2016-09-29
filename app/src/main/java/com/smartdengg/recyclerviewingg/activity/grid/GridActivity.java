@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.Button;
+
+import com.smartdengg.recyclerviewingg.BaseActivity;
+import com.smartdengg.recyclerviewingg.R;
+
 import butterknife.Bind;
 import butterknife.BindString;
 import butterknife.OnClick;
-import com.smartdengg.recyclerviewingg.BaseActivity;
-import com.smartdengg.recyclerviewingg.R;
 
 /**
  * Created by SmartDengg on 2016/1/29.

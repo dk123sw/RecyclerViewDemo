@@ -5,14 +5,16 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.Button;
-import butterknife.Bind;
-import butterknife.BindString;
-import butterknife.OnClick;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.R;
 
+import butterknife.Bind;
+import butterknife.BindString;
+import butterknife.OnClick;
+
 /**
- * Created by SmartDengg on 2016/1/29.
+ *
  */
 public class LinearActivity extends BaseActivity {
 
@@ -44,9 +46,9 @@ public class LinearActivity extends BaseActivity {
   }
 
   @Override public void setupToolbar() {
-    getSupportActionBar().setTitle(title);
+        getSupportActionBar().setTitle(title);
 
-    LinearActivity.this.setNavigationIcon(toolbar, R.drawable.ic_arrow_back);
-    LinearActivity.this.polishDrawable(toolbar.getNavigationIcon(), android.R.color.white);
+        LinearActivity.this.setNavigationIcon(toolbar, R.drawable.ic_arrow_back);
+        LinearActivity.this.polishDrawable(toolbar.getNavigationIcon(), android.R.color.white);
+        }
   }
-}

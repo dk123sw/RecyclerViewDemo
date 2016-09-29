@@ -12,6 +12,11 @@ import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.Toolbar;
 
+/**
+ * @不同版本的适配
+ */
+
+
 public class SomeCompat {
 
   private interface CompatImpl {

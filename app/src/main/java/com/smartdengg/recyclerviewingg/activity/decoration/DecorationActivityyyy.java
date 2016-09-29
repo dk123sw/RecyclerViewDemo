@@ -7,16 +7,19 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import butterknife.Bind;
-import butterknife.BindString;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.R;
 import com.smartdengg.recyclerviewingg.adapter.TextAdapter;
 import com.smartdengg.recyclerviewingg.decoration.DividerDecoration;
 import com.smartdengg.recyclerviewingg.decoration.DividerOverDecoration;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
+
+import butterknife.Bind;
+import butterknife.BindString;
 
 /**
  * Created by SmartDengg on 2016/1/30.
@@ -48,6 +51,8 @@ public class DecorationActivityyyy extends BaseActivity {
     Integer decorationType = getIntent().getIntExtra(TYPE, STANDARD_DRAW);
     DecorationActivityyyy.this.initView(decorationType);
 
+//    DecorationActivity向这个Activity传值STANDARD_DRAW或OVER_DRAW，而在这里获得这两个String类型值
+//    中的一个作为ToolBar的title。
     getSupportActionBar().setTitle(decorationType == STANDARD_DRAW ? standardString : overString);
   }
 

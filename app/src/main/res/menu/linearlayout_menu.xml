@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.linear.LinearActivity"
+    >
+    <item android:id="@+id/ORANGE"
+        android:title="ORANGE"
+        android:orderInCategory="1"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/BLUE"
+        android:title="BLUE"
+        android:orderInCategory="2"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/PURPLE"
+        android:title="PURPLE"
+        android:orderInCategory="3"
+        app:showAsAction="never"/>
+</menu>

@@ -11,7 +11,9 @@ import android.view.View;
 import com.smartdengg.recyclerviewingg.R;
 
 /**
- * 感谢http://stackoverflow.com/questions/24618829/how-to-add-dividers-and-spaces-between-items-in-recyclerview/27037230#27037230
+ * 感谢http://stackoverflow.com/questions/24618829/how-to-add-dividers-and-spaces-between-items-in-recyclerview/
+ * 27037230#27037230
+ * ItemDecorcation分割线
  */
 public class DividerDecoration extends RecyclerView.ItemDecoration {
 

@@ -6,17 +6,19 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import butterknife.Bind;
-import butterknife.BindString;
+import android.view.Menu;
+import android.view.MenuItem;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.IconsHelper;
 import com.smartdengg.recyclerviewingg.R;
 import com.smartdengg.recyclerviewingg.adapter.DrawableAdapter;
 import com.smartdengg.recyclerviewingg.decoration.MarginDecoration;
 
-/**
- * Created by SmartDengg on 2016/1/29.
- */
+import butterknife.Bind;
+import butterknife.BindString;
+
+
 public class LinearHorizontalActivity extends BaseActivity {
 
   @NonNull @BindString(R.string.linear_recyclerView_horizontal) protected String title;
@@ -51,5 +53,34 @@ public class LinearHorizontalActivity extends BaseActivity {
 
     LinearHorizontalActivity.this.setNavigationIcon(toolbar, R.drawable.ic_arrow_back);
     LinearHorizontalActivity.this.polishDrawable(toolbar.getNavigationIcon(), android.R.color.white);
+  }
+
+  /*
+* 给视图添加菜单选项
+* */
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.linearlayout_menu , menu);
+    return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    int id = item.getItemId();
+    switch (id){
+      case R.id.ORANGE:
+        recyclerView.setAdapter(
+                DrawableAdapter.created(LinearHorizontalActivity.this, IconsHelper.ICONS, DrawableAdapter.ORANGE));
+        break;
+      case R.id.BLUE:
+        recyclerView.setAdapter(
+                DrawableAdapter.created(LinearHorizontalActivity.this, IconsHelper.ICONS, DrawableAdapter.BLUE));
+        break;
+      case R.id.PURPLE:
+        recyclerView.setAdapter(
+                DrawableAdapter.created(LinearHorizontalActivity.this, IconsHelper.ICONS, DrawableAdapter.PURPLE));
+        break;
+    }
+    return super.onOptionsItemSelected(item);
   }
 }

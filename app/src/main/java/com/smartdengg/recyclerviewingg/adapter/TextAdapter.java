@@ -7,13 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.Bind;
-import butterknife.ButterKnife;
+
 import com.smartdengg.recyclerviewingg.R;
+
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
- * Created by SmartDengg on 2016/1/30.
+ * @文本视图
  */
 public class TextAdapter extends RecyclerView.Adapter<TextAdapter.ViewHolder> {
 
@@ -24,11 +27,11 @@ public class TextAdapter extends RecyclerView.Adapter<TextAdapter.ViewHolder> {
     return new TextAdapter(context, items);
   }
 
+//  构造类
   private TextAdapter(Context context, List<String> items) {
     this.context = context;
     this.items = items;
   }
-
 
 
   @Override public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

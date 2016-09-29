@@ -10,19 +10,22 @@ import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import butterknife.Bind;
-import butterknife.BindString;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.IconsHelper;
 import com.smartdengg.recyclerviewingg.R;
 import com.smartdengg.recyclerviewingg.adapter.DrawableAdapter;
 import com.smartdengg.recyclerviewingg.decoration.MarginDecoration;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.Bind;
+import butterknife.BindString;
+
 /**
- * Created by Joker on 2016/2/3.
+ * @利用下拉刷新瀑布流
  */
 public class SwipeRefreshActivity extends BaseActivity {
 
@@ -39,14 +42,21 @@ public class SwipeRefreshActivity extends BaseActivity {
 
   private DrawableAdapter drawableAdapter;
 
+//  主线程
   private Handler handler = new Handler(Looper.getMainLooper());
 
   private static final Integer[] icons =
       { IconsHelper.getRandomIcon(), IconsHelper.getRandomCatIcon(), IconsHelper.getRandomBeeIcon() };
 
+  /*
+  * SwipeRefreshLayout控件值允许有一个子元素：我们想滑动刷新的对象。它使用Listener机制来告之持有SwipeRefreshLayout
+  * 的组建某个事件发生了，也就是说假如是activity持有SwipeRefreshLayout，那么activity就必须实现一个接口来接收通知，
+  * 这个接口中需要实现的主要是onRefresh()方法
+  * */
   private SwipeRefreshLayout.OnRefreshListener refreshListener = new SwipeRefreshLayout.OnRefreshListener() {
     @Override public void onRefresh() {
-
+//    isRefreshing(): 检查是否处于刷新状态
+//    下拉刷新
       if (swipeRefreshLayout.isRefreshing()) {
         SwipeRefreshActivity.this.postItems();
       }
@@ -66,9 +76,11 @@ public class SwipeRefreshActivity extends BaseActivity {
   private void initView() {
 
     swipeRefreshLayout.setColorSchemeResources(IconsHelper.colors);
+//  setOnRefreshListener(OnRefreshListener): 为布局添加一个Listener
     swipeRefreshLayout.setOnRefreshListener(refreshListener);
     swipeRefreshLayout.post(new Runnable() {
       @Override public void run() {
+//      setRefreshing(boolean): 显示或隐藏刷新进度条
         swipeRefreshLayout.setRefreshing(true);
       }
     });

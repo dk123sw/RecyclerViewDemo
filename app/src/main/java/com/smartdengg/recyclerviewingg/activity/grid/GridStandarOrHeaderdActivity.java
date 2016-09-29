@@ -8,18 +8,22 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import butterknife.Bind;
-import butterknife.BindString;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.IconsHelper;
 import com.smartdengg.recyclerviewingg.R;
 import com.smartdengg.recyclerviewingg.adapter.DrawableAdapter;
 import com.smartdengg.recyclerviewingg.decoration.MarginDecoration;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+import butterknife.Bind;
+import butterknife.BindString;
+
 /**
  * Created by SmartDengg on 2016/1/29.
+ *
  */
 public class GridStandarOrHeaderdActivity extends BaseActivity {
 
@@ -56,10 +60,15 @@ public class GridStandarOrHeaderdActivity extends BaseActivity {
 
   private void initView(int type) {
 
+//    Parameters:
+//    context (GridStandarOrHeaderdActivity.this) - Current context, will be used to access resources.
+//              spanCount (2) - The number of columns in the
     final GridLayoutManager gridLayoutManager = new GridLayoutManager(GridStandarOrHeaderdActivity.this, 2);
     gridLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
     gridLayoutManager.setSmoothScrollbarEnabled(true);
 
+//    ItemDecoration - 负责绘制Item附近的分割线
+//    这里MarginDecoration的构造类需要一个Context传值 (这里也可以定义一个ItemDecoration类，这样就不需要传值)
     recyclerView.addItemDecoration(new MarginDecoration(GridStandarOrHeaderdActivity.this));
     recyclerView.setHasFixedSize(true);
     recyclerView.setLayoutManager(gridLayoutManager);
@@ -69,6 +78,7 @@ public class GridStandarOrHeaderdActivity extends BaseActivity {
     if (type == HEADER) {
       gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
         @Override public int getSpanSize(int position) {
+//        这句话在这里永远是等于1
           return drawableAdapter.isHeader(position) ? gridLayoutManager.getSpanCount() : 1;
         }
       });

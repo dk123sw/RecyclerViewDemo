@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.Button;
-import butterknife.Bind;
-import butterknife.BindString;
-import butterknife.OnClick;
+
 import com.smartdengg.recyclerviewingg.BaseActivity;
 import com.smartdengg.recyclerviewingg.R;
 import com.smartdengg.recyclerviewingg.activity.ItemAnimator.ItemAnimatorActivity;
@@ -16,11 +14,17 @@ import com.smartdengg.recyclerviewingg.activity.linear.LinearActivity;
 import com.smartdengg.recyclerviewingg.activity.staggered.StaggeredActivity;
 import com.smartdengg.recyclerviewingg.activity.swipe.SwipeRefreshActivity;
 
+import butterknife.Bind;
+import butterknife.BindString;
+import butterknife.OnClick;
+
 /**
- * Created by SmartDengg on 2016/1/28.
+ * 给Button有Text还设置String的意义是ToolBar的需要
+ * 跳转到其他Activity
  */
 public class MainActivity extends BaseActivity {
 
+  //  Button的String值
   @BindString(R.string.app_name) protected String title;
   @BindString(R.string.linear_recyclerView) protected String linearString;
   @BindString(R.string.grid_recyclerView) protected String gridString;
@@ -29,6 +33,7 @@ public class MainActivity extends BaseActivity {
   @BindString(R.string.item_animator) protected String animatorString;
   @BindString(R.string.swipe_recyclerView) protected String swipeString;
 
+// 声明Button
   @NonNull @Bind(R.id.main_layout_linear_btn) protected Button linearButton;
   @NonNull @Bind(R.id.main_layout_grid_btn) protected Button gridButton;
   @NonNull @Bind(R.id.main_layout_staggered_btn) protected Button staggeredButton;
@@ -40,11 +45,12 @@ public class MainActivity extends BaseActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.navigate_main_layout);
 
+//    给Button设置String值
     this.linearButton.setText(linearString);
     this.gridButton.setText(gridString);
     this.staggeredButton.setText(staggeredString);
     this.decorationButton.setText(decorationString);
-    this.decorationButton.setText(decorationString);
+//    this.decorationButton.setText(decorationString);
     this.animatorButton.setText(animatorString);
     this.swipeButton.setText(swipeString);
   }
