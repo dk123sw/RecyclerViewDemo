@@ -12,6 +12,7 @@
 1. Nullness注解；
 1. 资源类型注解；
 1. IntDef和StringDef注解；
+
 - https://asce1885.gitbooks.io/android-rd-senior-advanced/content/shen_ru_qian_chu_android_support_annotations.html
 ##### java.lang.annotation
 - http://blog.csdn.net/lifetragedy/article/details/7394910
