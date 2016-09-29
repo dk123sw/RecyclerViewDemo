@@ -1,7 +1,7 @@
 *copy  SmartDengg/RecyclerViewingg*
 #### RecycleView
 - http://www.jianshu.com/p/16712681731e  
-###### 注重Adapter与LayoutManager	推荐使用本例给的添加删除条目方法
+ 注重Adapter与LayoutManager	推荐使用本例给的添加删除条目方法
 - http://blog.csdn.net/lmj623565791/article/details/45059587	
 ###### 注重ItemDecoration与ItemAnimation  推荐使用本例的ItemDecorcation Listener
 
