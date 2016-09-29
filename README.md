@@ -1,20 +1,17 @@
-# RecyclerViewingg
+*copy  SmartDengg/RecyclerViewingg*
+#### RecycleView
+- http://www.jianshu.com/p/16712681731e  
+###### 注重Adapter与LayoutManager	推荐使用本例给的添加删除条目方法
+- http://blog.csdn.net/lmj623565791/article/details/45059587	
+###### 注重ItemDecoration与ItemAnimation  推荐使用本例的ItemDecorcation Listener
 
-更多详细信息，请见仓库内PPT，或者我的简书博客[RecyclerView技术栈](http://www.jianshu.com/p/16712681731e)
-
-**Developed By**
------------------
-
-- 小鄧子 - Hi4Joker@gmail.com
-
-[小鄧子的简书](http://www.jianshu.com/users/df40282480b4/latest_articles)
- 
-[小鄧子的慕课网专题](http://www.imooc.com/myclub/article/uid/2536335)
-
-<a href="http://weibo.com/5367097592/profile?rightmod=1&wvr=6&mod=personinfo">
-  <img alt="Follow me on Weibo" src="http://upload-images.jianshu.io/upload_images/268450-50e41e15ac29b776.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
-</a>
-
-<a href="http://chuantu.biz/t2/18/1446906570x1822611354.png">
-  <img alt="Follow me on Wechat" src="http://upload-images.jianshu.io/upload_images/268450-1025666a7a10ec97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
-</a>
+	SwipeRefreshLayout下拉刷新组件
+	
+##### android.support.annotation 注解(@)
+###### 有三种类型的注解可供我们使用：
+1. Nullness注解；
+1. 资源类型注解；
+1. IntDef和StringDef注解；
+- https://asce1885.gitbooks.io/android-rd-senior-advanced/content/shen_ru_qian_chu_android_support_annotations.html
+##### java.lang.annotation
+- http://blog.csdn.net/lifetragedy/article/details/7394910
